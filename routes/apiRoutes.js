@@ -1,36 +1,54 @@
-const getData = require("../Develop/db/db.json")
-const express = require("express")
-const app = express()
+// const express = require("express");
+// const path = require("path");
+// const fs = require("fs");
+// const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.static(path.join(__dirname, 'db')))
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'db')));
+// app.use(express.static(path.join(__dirname, 'routes')));
 
+// //Routing
 
-console.log("I work!")
-
-module.exports = function(app) {
+// module.exports = function(app){
+//     app.get('/api/notes', function (request, response) {
+//         // respond with: content of db.json
+//         return response.json(JSON.parse(fs.readFileSync('./db/db.json')));
+//     });
     
-  
-    app.get("/api/notes", function(req, res) {
-      return res.json(getData);
-    });
-  
- let id = 0;
-  
-
-  
-    app.post("/api/notes", function(req, res) {
-      req.body.id = ++id;
-      getData.push(req.body);
-      res.json(req.body);
+//     app.post('/api/notes', function (request, response) {
+//         // get all body stuff from request.body object
+//         // get all request parameter stuff from request.params object
+//         let newNote = request.body;
+//         let existingNotes = JSON.parse(fs.readFileSync('./db/db.json'));
+//         let id = 1;
+//         while
+//             (existingNotes.some((value, index) => {
+//                 return value.id === id
+//             })) {
+//             id++
+//         }
+//         newNote.id = id;
+//         existingNotes.push(newNote);
+//         console.log("adding new note");
+//         fs.writeFileSync('./db/db.json', JSON.stringify(existingNotes));
+//         response.json(newNote);
+//     });
     
-    });
+//     app.delete('/api/notes/:id', function (request, response) {
+//         // get all body stuff from request.body object
+//         // get all request parameter stuff from request.params object
+//         let existingNotes = JSON.parse(fs.readFileSync('./db/db.json'));
+//         let id = parseInt(request.params.id);
+//         console.log("deleting note with id: " + id);
+//         existingNotes = existingNotes.filter(note => {
+//             return note.id !== id
+//         });
+//         console.log("updated notes are now: " + existingNotes);
+//         fs.writeFileSync('./db/db.json', JSON.stringify(existingNotes));
 
-    app.delete("/api/notes/:id", function(req, res) {
-      const deleteId = req.params.id;
-      const idIndex = getData.findIndex((data) => data.id == deleteId);
-      getData.splice(idIndex, 1);
-      res.json({ok: true});
-    });
-  
-  };
+//         response.json(existingNotes);
+    
+//     });
+// }
