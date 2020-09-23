@@ -1,18 +1,21 @@
-const getData = require("../Develop/db/db.json");
+const db = "../Develop"
 
-
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+const app = express();
 
 
 module.exports = function(app) {
     
   
-    app.get("/api/notes", function(req, res) {
-      res.json(getData);
-    });
+  app.get('/api/notes', (req, res) => {
+    return res.JSON.parse(fs.readFileSync('../Develop/db/db.son'))
+    console.log("SUP")
+})
   
  let id = 0;
   
-
   
     app.post("/api/notes", function(req, res) {
       req.body.id = ++id;

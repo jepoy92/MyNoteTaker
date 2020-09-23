@@ -1,14 +1,6 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const app = express();
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'db')));
-app.use(express.static(path.join(__dirname, 'routes')));
-//Routing
 
 module.exports = function(app){ 
     app.get('/notes', function (request, response) {
