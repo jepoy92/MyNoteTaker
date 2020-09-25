@@ -6,29 +6,25 @@ const db = require("./db.json")
 module.exports = function(app) {
     
   
-  app.get('/api/notes', (request, res) => {
-    const filePath = path.join(__dirname,"db.json")
-    fs.readFile(filePath, "utf8", function(error, data){
-      console.log(data)
-      return res.json(data)
+  app.get('/api/notes', (request, response) => {
+      return response.json(db)
     })
-})
   
  let id = 0;
   
   
-    app.post("/api/notes", function(req, res) {
+    app.post("/api/notes", function(req, response) {
       req.body.id = ++id;
       db.push(req.body);
-      res.json(req.body);
+      response.json(req.body);
     
     });
 
-    app.delete("/api/notes/:id", function(req, res) {
+    app.delete("/api/notes/:id", function(req, response) {
       const deleteId = req.params.id;
       const idIndex = db.findIndex((data) => data.id == deleteId);
       db.splice(idIndex, 1);
-      res.json({ok: true});
+      response.json({ok: true});
     });
   
   };
