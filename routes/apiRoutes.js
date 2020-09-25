@@ -1,17 +1,17 @@
-const db = "../Develop"
-
-const express = require("express");
-const path = require("path");
+// const db = require("../Develop/db/db.json");
 const fs = require("fs");
-const app = express();
-
+const path = require("path")
+const db = require("./db.json")
 
 module.exports = function(app) {
     
   
-  app.get('/api/notes', (req, res) => {
-    return res.JSON.parse(fs.readFileSync('../Develop/db/db.son'))
-    console.log("SUP")
+  app.get('/api/notes', (request, res) => {
+    const filePath = path.join(__dirname,"db.json")
+    fs.readFile(filePath, "utf8", function(error, data){
+      console.log(data)
+      return res.json(data)
+    })
 })
   
  let id = 0;
@@ -19,15 +19,15 @@ module.exports = function(app) {
   
     app.post("/api/notes", function(req, res) {
       req.body.id = ++id;
-      getData.push(req.body);
+      db.push(req.body);
       res.json(req.body);
     
     });
 
     app.delete("/api/notes/:id", function(req, res) {
       const deleteId = req.params.id;
-      const idIndex = getData.findIndex((data) => data.id == deleteId);
-      getData.splice(idIndex, 1);
+      const idIndex = db.findIndex((data) => data.id == deleteId);
+      db.splice(idIndex, 1);
       res.json({ok: true});
     });
   
