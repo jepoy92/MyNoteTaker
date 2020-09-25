@@ -1,6 +1,6 @@
 
 # My Note Taker
-![My Note Taker image](../Develop/assets/MyNoteTaker.png)
+![My Note Taker image](./Develop/assets/MyNoteTaker.png)
 ## Description 
 
 Write, save, and notes using this express powered app which uses servers to host your application.
