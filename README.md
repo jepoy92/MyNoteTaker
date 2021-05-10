@@ -8,7 +8,6 @@ Write, save, and notes using this express powered app which uses servers to host
 
 ## Table of Contents
 
-If your README is very long, add a table of contents to make it easy for users to find what they need.
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -36,7 +35,31 @@ This is for users that need to keep track of a lot of information. By being able
 
 ## Contributing
 
-UCSD Coding bootcamp TA's and Chris! Thank you for helping me figure out my directory issue!
+- [Zachary Bryan](https://github.com/zacharybryan)
+- [Tim Sanders](https://github.com/tbsanders5)
+- [Nick Konzen](https://github.com/NTKonzen)
+- [Kira Bismuth Lowrey](https://github.com/KILowrey)
+- [Nancy Lambert-Brown](https://github.com/n-lambert)
+- [Mando Estrada](https://github.com/Mando619)
+- [Talia Vazquez](https://github.com/taliavazquez)
+- [Perry Theobald](https://github.com/perrytjr)
+- [Jeneth Diestra](https://github.com/jen6one9)
+- [Matthew Rogers](https://github.com/Rogers-Development-Services)
+- [Clyde Baron Rapinan](https://github.com/clydebaron2000)
+- [Johnny Lieu](https://github.com/johnnylieu)
+- [Robert Graham](https://github.com/Robmgraham)
+- [Plover Brown](https://github.com/rebgrasshopper)
+- [Talia Vazquez](https://github.com/taliavazquez)
+- [Nancy Lambert-Brown](https://github.com/n-lambert)
+- [Zachary Bryan](https://github.com/zacharybryan)
+- [Perry Theobald](https://github.com/perrytjr)
+- [Tim Sanders](https://github.com/tbsanders5)
+- [Jeneth Diesta](https://github.com/jen6one9)
+- [Matthew Rogers](https://github.com/Rogers-Development-Services)
+- [Mando Estrada](https://github.com/Mando619)
+- [Clyde Baron Rapinan](https://github.com/clydebaron2000)
+- [Johnny Lieu](https://github.com/johnnylieu)
+- [Robert Graham](https://github.com/Robmgraham)
 
 ## Tests 
 
